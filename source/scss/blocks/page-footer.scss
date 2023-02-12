@@ -1,0 +1,13 @@
+.page-footer {
+  background-color: $basic-footer;
+  min-height: 100px;
+
+  // page-footer__container
+  &__container {
+    text-align: center;
+    color: $basic-white;
+    font-size: $title-size;
+    padding: 10px 10px;
+    min-height: inherit;
+  }
+}

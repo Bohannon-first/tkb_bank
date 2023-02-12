@@ -1,0 +1,49 @@
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 14px;
+    left: 8px;
+    width: 15px;
+    height: 2px;
+    background-color: $basic-white;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 14px;
+    left: 8px;
+    width: 15px;
+    height: 2px;
+    background-color: $basic-white;
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before {
+    background-color: $input-error-color;
+  }
+
+  &:hover::after {
+    background-color: $input-error-color;
+  }
+
+  &:active::before {
+    opacity: 0.5;
+  }
+
+  &:active::after {
+    opacity: 0.5;
+  }
+}

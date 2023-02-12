@@ -1,0 +1,15 @@
+.main-menu {
+
+  // main-menu__item
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  // main-menu__link
+  &__link {
+    font-family: $roboto;
+    font-size: $main-size;
+    color: $basic-white;
+    line-height: $main-interlining;
+  }
+}

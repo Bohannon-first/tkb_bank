@@ -1,0 +1,63 @@
+.modal {
+  animation: showModal .5s ease 0s 1 normal forwards;
+
+  // modal__content
+  &__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    position: fixed;
+    background-color: $main-blue;
+    box-sizing: border-box;
+    padding: 15px 15px;
+    width: 500px;
+    min-height: 350px;
+    font-family: $roboto;
+    color: $basic-white;
+    font-size: $big-text-size;
+    line-height: 3rem;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 5px;
+  }
+
+  // modal--blackout
+  &--blackout {
+    background-color: $modal-blackout;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10001;
+    top: 0;
+    left: 0;
+  }
+}
+
+// Анимация появления модального окна
+@keyframes showModal {
+  0% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Анимация закрытия модального окна
+@keyframes closeModal {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}

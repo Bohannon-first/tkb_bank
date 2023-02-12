@@ -1,5 +1,19 @@
 // Переменные цветов
 $basic-white: #ffffff;
+$basic-black: #000000;
+$main-header: rgb(83, 112, 3);
+$basic-main: rgb(146, 202, 216);
+$basic-footer: rgba(31, 9, 230, 0.945);
+$main-nav-color: rgb(47, 90, 107);
+$border-color: #1d1101;
+$border-input-color: #6e6868;
+$table-background-color: #b86d6d;
+$main-btn-bgc: #40a361;
+$main-btn-hover: #0edd53;
+$input-error-color: rgb(211, 7, 7);
+$main-blue: #256bec;
+$modal-blackout: rgba(0, 0, 0, .9);
+$btn-disabled: #c1c1c1;
 
 // Переменные вьюпортов
 $tablet-width: 1159px;
@@ -8,7 +22,10 @@ $tablet-width: 1159px;
 $roboto: 'Roboto', 'Verdana', sans-serif;
 
 // Размер шрифта
+$big-text-size: 36px;
+$title-size: 24px;
 $main-size: 18px;
+$btn-size: 16px;
 
 // Тип начертания шрифта (жирность)
 $roboto-regular: 400;

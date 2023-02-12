@@ -1,0 +1,44 @@
+.main-input {
+  width: 170px;
+  padding: 5px 5px;
+  border-radius: 5%;
+  background-color: $basic-white;
+  color: $basic-black;
+  border: 2px solid $border-input-color;
+  font-size: $btn-size;
+  font-family: $roboto;
+}
+
+// Красная обводка, если поля ввода не заполнены
+.main-input--error {
+  border: 2px solid $input-error-color;
+}
+
+// Класс с анимацией тряски полей ввода при их незаполненности
+.main-input--shake-error {
+  animation: shake .4s;
+}
+
+// Тряска в случае ошибки
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-15px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(15px);
+  }
+}
