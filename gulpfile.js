@@ -51,6 +51,14 @@ const html = () => {
     .pipe(browserSync.stream());
 };
 
+// Временная задача для php
+const php = () => {
+  return gulp.src('./source/*.php')
+    .pipe(gulp.dest('build'))
+    .pipe(browserSync.stream());
+};
+// Временная задача для php
+
 // Scripts
 const scripts = () => {
   return gulp.src('./source/js/*.js')
@@ -122,6 +130,7 @@ const server = () => {
 
   gulp.watch('source/scss/**/*.scss', gulp.series(sassCompileCss));
   gulp.watch('source/*.html', gulp.series(html));
+  gulp.watch('source/*.php', gulp.series(php)); // временно
   gulp.watch('source/js/*.js', gulp.series(scripts));
   gulp.watch('source/img/**/*.{png,jpg,jpeg,svg}', gulp.series(optimizeImages, createWebp, sprite, refresh));
 };
@@ -145,6 +154,7 @@ exports.build = gulp.series(
   connectBootstrap,
   sassCompileCss,
   html,
+  php, // Временный таск
   scripts,
   optimizeImages,
   createWebp,
@@ -161,6 +171,7 @@ exports.start = gulp.series(
   connectBootstrap,
   sassCompileCss,
   html,
+  php, // Временный таск
   scripts,
   optimizeImages,
   createWebp,

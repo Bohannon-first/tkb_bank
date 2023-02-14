@@ -27,6 +27,16 @@ const isFieldFilled = (evt) => {
     const jsonDataForm = Object.fromEntries(formData);
     // eslint-disable-next-line no-console
     console.log(JSON.stringify(jsonDataForm));
+
+    // fetch('form.php', {
+    //   method: 'POST',
+    //   body: JSON.stringify(jsonDataForm)
+    // }).then((response) => {
+    //   return response.json();
+    // })
+    //   .then((data) => {
+    //     return console.log(data);
+    //   });
     form.reset();
   }
 };

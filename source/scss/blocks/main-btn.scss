@@ -22,4 +22,9 @@
   &--disabled {
     background-color: $btn-disabled;
   }
+
+  @media (max-width: 1460px) {
+    order: -1;
+    margin-bottom: 30px;
+  }
 }

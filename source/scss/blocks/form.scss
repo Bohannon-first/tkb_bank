@@ -1,12 +1,40 @@
 .form {
 
-  width: 900px;
+  max-width: 950px;
   color: $basic-white;
   margin: 0 auto;
 
+  // form__table-wrapper
+  &__table-wrapper {
+    width: inherit;
+    margin: 0 auto;
+
+    @media (max-width: $tablet-width) {
+      width: 600px;
+      overflow-x: auto;
+    }
+  }
+
+  // Стилизация скролла таблицы
+  &__table-wrapper::-webkit-scrollbar-track {
+    background-color: $basic-white;
+    border-radius: 5px;
+  }
+
+  &__table-wrapper::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+    background-color: $basic-white;
+  }
+
+  &__table-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: $main-blue;
+  }
+
   // .form__table
   &__table {
-    width: 100%;
+    width: 950px;
     border-collapse: collapse;
     border: 2px solid $border-color;
     background-color: $table-background-color;

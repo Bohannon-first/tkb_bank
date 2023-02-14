@@ -6,5 +6,9 @@
     height: 100%;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 1460px) {
+      flex-direction: column;
+    }
   }
 }
