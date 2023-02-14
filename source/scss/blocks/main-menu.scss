@@ -12,4 +12,12 @@
     color: $basic-white;
     line-height: $main-interlining;
   }
+
+  &__link:hover {
+    color: $link-hover-color;
+  }
+
+  &__link:active {
+    opacity: 0.5;
+  }
 }

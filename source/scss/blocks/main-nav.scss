@@ -1,4 +1,19 @@
 .main-nav {
   background-color: $main-nav-color;
   padding: 10px 10px;
+  height: 100%;
+
+  transition: all 0.5s;
+
+  @media (max-width: $mobile-width) {
+    transform: translateX(-300px);
+    width: inherit;
+  }
+
+  // main-nav--show
+  &--show {
+    @media (max-width: $mobile-width) {
+      transform: translateX(0);
+    }
+  }
 }

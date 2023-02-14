@@ -116,6 +116,8 @@ img {
 .main-nav {
   background-color: rgb(47, 90, 107);
   padding: 10px 10px;
+  height: 100%;
+  transition: all 0.5s;
 }
 
 .main-btn {
@@ -152,6 +154,14 @@ img {
   font-size: 18px;
   color: #ffffff;
   line-height: 32px;
+}
+
+.main-menu__link:hover {
+  color: rgb(230, 64, 34);
+}
+
+.main-menu__link:active {
+  opacity: 0.5;
 }
 
 .main-input {
@@ -384,6 +394,52 @@ img {
   opacity: 0.5;
 }
 
+.burger {
+  position: relative;
+  margin-bottom: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: tomato;
+  border: none;
+  cursor: pointer;
+  display: none;
+  transition: all 0.5s;
+}
+
+.burger__line {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 30px;
+  height: 3px;
+  background-color: #ffffff;
+}
+
+.burger__line:nth-child(1) {
+  transform: translateY(-10px);
+  transition: transform 0.5s;
+}
+
+.burger__line:nth-child(3) {
+  transform: translateY(10px);
+  transition: transform 0.5s;
+}
+
+.burger--open .burger__line:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+  transition: transform 0.5s;
+}
+
+.burger--open .burger__line:nth-child(2) {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.burger--open .burger__line:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+  transition: transform 0.5s;
+}
+
 @media (max-width: 1460px) {
   .main-content__container {
     flex-direction: column;
@@ -399,5 +455,35 @@ img {
   .form__table-wrapper {
     width: 600px;
     overflow-x: auto;
+  }
+}
+
+@media (max-width: 985px) {
+  .page-main__main-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+  }
+
+  .page-main {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-nav {
+    transform: translateX(-300px);
+    width: inherit;
+  }
+
+  .main-nav--show {
+    transform: translateX(0);
+  }
+
+  .burger {
+    display: flex;
+    margin-bottom: 0;
+    margin-top: 10px;
+    margin-left: 10px;
   }
 }
