@@ -28,15 +28,26 @@ const isFieldFilled = (evt) => {
     // eslint-disable-next-line no-console
     console.log(JSON.stringify(jsonDataForm));
 
-    // fetch('form.php', {
-    //   method: 'POST',
-    //   body: JSON.stringify(jsonDataForm)
-    // }).then((response) => {
-    //   return response.json();
-    // })
-    //   .then((data) => {
-    //     return console.log(data);
-    //   });
+    fetch('http://u1201142.isp.regruhosting.ru/form.php', {
+      method: 'POST',
+      body: JSON.stringify(jsonDataForm),
+    },
+    )
+      .then((response) => {
+        if (response.ok) {
+          // eslint-disable-next-line no-console
+          console.log('Форма отправлена');
+        } else {
+          // eslint-disable-next-line no-console
+          console.log('Не удалось отправить форму');
+        }
+      })
+      .catch((err) => {
+        // eslint-disable-next-line no-console
+        console.log(`${err} Не удалось отправить форму. Попробуйте еще раз.`);
+        throw err;
+      });
+
     form.reset();
   }
 };
