@@ -28,7 +28,7 @@ const isFieldFilled = (evt) => {
     // eslint-disable-next-line no-console
     console.log(JSON.stringify(jsonDataForm));
 
-    fetch('http://bohannon.ru/php/projects/form.php', {
+    fetch('http://bohannon.ru/php/projects/tkb_bank/form.php', {
       method: 'POST',
       body: JSON.stringify(jsonDataForm),
     },
