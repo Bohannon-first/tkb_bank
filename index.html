@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ТКБ</title>
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body class="page-body">
+  <header class="page-header">
+    <div class="container page-header__container">
+      Header
+    </div>
+  </header>
+
+  <main class="page-main">
+    <div class="page-main__main-nav">
+      <button class="burger" type="button" aria-label="Показать/скрыть главное меню">
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+        <span class="burger__line"></span>
+      </button>
+      <nav class="main-nav">
+        <ul class="main-menu">
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">Пункт 1</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">Пункт 2</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">Пункт 3</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="#">Пункт 4</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="main-content">
+      <div class="container main-content__container">
+        <h1 class="visually-hidden">Форма для заполнения данных</h1>
+        <form class="form" id="form" action="https://bohannon.ru/php/projects/tkb_bank/form.php" method="post"
+          autocomplete="off" enctype="multipart/form-data" target="_blank">
+          <div class="form__table-wrapper">
+            <table class="form__table" id="table">
+              <tr class="form__table-row">
+                <th class="form__table-title">Фио</th>
+                <th class="form__table-title">Должность</th>
+                <th class="form__table-title">Возраст</th>
+                <th class="form__table-title">Компетенции</th>
+              </tr>
+              <tr class="form__table-row">
+                <td class="form__table-cell">
+                  <label class="visually-hidden" for="name-user">Фамилия Имя Отчество</label>
+                  <input class="main-input" type="text" name="name-user" id="name-user">
+                </td>
+                <td class="form__table-cell">
+                  <label class="visually-hidden" for="post-user">Должность</label>
+                  <select class="main-select" name="post-user" id="post-user">
+                    <option value="analyst">Аналитик</option>
+                    <option value="manager">Менеджер</option>
+                    <option value="programmer">Программист</option>
+                    <option value="lawyer">Юрист</option>
+                  </select>
+                </td>
+                <td class="form__table-cell">
+                  <label class="visually-hidden" for="age-user">Возраст</label>
+                  <input class="main-input" type="number" name="age-user" id="age-user">
+                </td>
+                <td class="form__table-cell">
+                  <label class="visually-hidden" for="competencies-user">Компетенции</label>
+                  <textarea class="main-input main-textarea" name="competencies-user" id="competencies-user"></textarea>
+                </td>
+              </tr>
+              <tr class="form__table-row">
+                <td class="form__table-cell"></td>
+                <td class="form__table-cell"></td>
+                <td class="form__table-cell"></td>
+                <td class="form__table-cell"></td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="form__btn-wrapper">
+            <button class="main-btn" type="submit">Отправить форму</button>
+            <button class="main-btn" id="add-row" type="button">Добавить строку</button>
+          </div>
+        </form>
+        <button class="main-btn main-btn--remove-row" id="delete-row" type="button">Удалить строку</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container page-footer__container">
+      footer
+    </div>
+  </footer>
+
+  <div class="modal modal--blackout hidden">
+    <div class="modal__content">
+      Форма отправлена!
+      <button class="btn-close" id="modal-btn-close" type="button" aria-label="Закрыть модальное окно"></button>
+    </div>
+  </div>
+
+  <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
